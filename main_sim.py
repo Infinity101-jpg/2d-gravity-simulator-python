@@ -155,8 +155,8 @@ def Update_coords_and_vel():
 screen.fill(BLACK) 
 while True:
     # 1. Erase
-    Fill_Circle(Obj_1_coords[0], Obj_1_coords[1], BLACK, Obj_1_radius)
-    Fill_Circle(Obj_2_coords[0], Obj_2_coords[1], BLACK, Obj_2_radius)
+    Fill_Circle(Obj_1_coords[0], Obj_1_coords[1], BLACK, Obj_1_radius+10)
+    Fill_Circle(Obj_2_coords[0], Obj_2_coords[1], BLACK, Obj_2_radius+10)
     
     # 2. Logic
     Update_coords_and_vel()
@@ -164,10 +164,18 @@ while True:
     # 3. Draw
     Fill_Circle(Obj_1_coords[0], Obj_1_coords[1], Obj_1_col, Obj_1_radius)
     Fill_Circle(Obj_2_coords[0], Obj_2_coords[1], Obj_2_col, Obj_2_radius)
+    draw_pos1 = (int(Obj_1_coords[0] + 600), int(300 - Obj_1_coords[1]))
+    draw_pos2 = (int(Obj_2_coords[0] + 600), int(300 - Obj_2_coords[1]))
+    pygame.draw.circle(screen, Obj_1_col, draw_pos1, Obj_1_radius+1)
+    pygame.draw.circle(screen, Obj_2_col, draw_pos2, Obj_2_radius+1)
+
     if FORCE_MODIFIER < 1: 
         FORCE_MODIFIER = FORCE_MODIFIER * 0.002;
     if FORCE_MODIFIER > 1: 
         FORCE_MODIFIER = 1000;
+        
+    current_fps = int(clock.get_fps())
+    pygame.display.set_caption("2D Oribital Gravity Simulation | FPS: " + str(current_fps))
     
     pygame.display.flip() 
     quit_() 
