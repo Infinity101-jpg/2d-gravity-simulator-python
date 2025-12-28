@@ -155,8 +155,8 @@ def Update_coords_and_vel():
 screen.fill(BLACK) 
 while True:
     # 1. Erase
-    Fill_Circle(Obj_1_coords[0], Obj_1_coords[1], BLACK, Obj_1_radius+10)
-    Fill_Circle(Obj_2_coords[0], Obj_2_coords[1], BLACK, Obj_2_radius+10)
+    Fill_Circle(Obj_1_coords[0], Obj_1_coords[1], BLACK, Obj_1_radius+30)
+    Fill_Circle(Obj_2_coords[0], Obj_2_coords[1], BLACK, Obj_2_radius+30)
     
     # 2. Logic
     Update_coords_and_vel()
@@ -180,3 +180,4 @@ while True:
     pygame.display.flip() 
     quit_() 
     clock.tick(120 - Game_slowdown_percent)
+
