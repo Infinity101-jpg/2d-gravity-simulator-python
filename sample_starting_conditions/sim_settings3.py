@@ -6,7 +6,7 @@ Obj_1_col = "LIME"
 Obj_1_radius = 3
 Obj_1_weight = .0000008           
 Obj_1_coords = [150.0, -200.0] # Use floats
-Velocity1 = [-1.2, 0]    ## regs, op 
+Velocity1 = [-1.3, 0]    ## regs, op 
 
 # OBJECT 2 (Red Star)
 Obj_2_col = "GOLD"
