@@ -6,7 +6,7 @@ Obj_1_col = "PINK"
 Obj_1_radius = 10
 Obj_1_weight = .00000000008           
 Obj_1_coords = [-150.0, 100.0] # Use floats
-Velocity1 = [.5, .8]    ## regs, op 
+Velocity1 = [.5, .9]    ## regs, op 
 
 # OBJECT 2 (Red Star)
 Obj_2_col = "TEAL"
